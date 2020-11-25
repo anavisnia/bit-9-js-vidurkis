@@ -1,5 +1,5 @@
 import { demoDuomenys } from '../../data/data.js';
-import { arPrasmingasSarasas } from '../validacijos/validacijos.js'
+import { arPrasmingasSarasas, arNormalusSkaicius } from '../validacijos/validacijos.js'
 
 function sarasoSuma (skaiciuSarasas) {
     if (!arPrasmingasSarasas(skaiciuSarasas)) {
@@ -17,7 +17,7 @@ function sarasoSuma (skaiciuSarasas) {
         sum += duom;
     }
 
-    if(!arNormalusSkaicius(suma, 'sumos rezultatas')) {
+    if(!arNormalusSkaicius(sum, 'sumos rezultatas')) {
         return false;
     }
 

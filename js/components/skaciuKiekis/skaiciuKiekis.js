@@ -1,4 +1,4 @@
-import { arPrasmingasSarasas, arPrasmingasSarasas } from '../validacijos/validacijos.js'
+import { arPrasmingasSarasas, arNormalusSkaicius } from '../validacijos/validacijos.js'
 
 function skaiciuKiekis (skaiciuSarasas) {
     if (!arPrasmingasSarasas(skaiciuSarasas)) {
@@ -15,16 +15,10 @@ function skaiciuKiekis (skaiciuSarasas) {
         kiekkis++;
     }
 
-    if (typeof kiekkis !== 'number') {
-        // infinity and NaN paciopiemos
-        console.error('ERROR: gautos kiekio rezultatas nera skaiciaus tipo.');
+    if(!arNormalusSkaicius(kiekkis, 'vidurkio rezultatas')) {
         return false;
     }
-    if (!isFinite(kiekkis)) {
-        // infinity and NaN paciopiemos
-        console.error('ERROR: gautos kiekio rezultatas nera tikras skaicius.');
-        return false;
-    }
+
     return kiekkis;
 }   
 
