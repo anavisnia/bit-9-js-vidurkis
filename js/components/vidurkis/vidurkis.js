@@ -9,7 +9,8 @@ function vidurkis (skaiciuSarasas) {
     }
     // logic
     const suma = sarasoSuma(skaiciuSarasas);
-    const kiekis = skaiciuKiekis();
+    const kiekis = skaiciuKiekis(skaiciuSarasas);
+    
     const vid = suma / kiekis;
 
     // postlogic validation

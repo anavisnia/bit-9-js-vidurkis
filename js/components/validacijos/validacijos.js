@@ -5,6 +5,7 @@ function arPrasmingasSarasas(sarasas) {
     }
     if (sarasas.length === 0) {
         console.error('ERROR: duotas array yra tuscias.');
+        return false;
     }
     return true;
 }

@@ -1,4 +1,4 @@
-import { demoDuomenys } from '../../data/data.js';
+
 import { arPrasmingasSarasas, arNormalusSkaicius } from '../validacijos/validacijos.js'
 
 function sarasoSuma (skaiciuSarasas) {
@@ -7,14 +7,14 @@ function sarasoSuma (skaiciuSarasas) {
     }
     let sum = 0;
     for (let i = 0; i < skaiciuSarasas.length; i++ ) {
-        let duom = demoDuomenys[i];
+        let skaicius = skaiciuSarasas[i];
 
-        if (typeof duom !== 'number') {
+        if (typeof skaicius !== 'number') {
             console.warn('WARNING: skaiciu sarase rasta ne skaiciaus tipo reiksme. ');
             continue;
         }
 
-        sum += duom;
+        sum += skaicius;
     }
 
     if(!arNormalusSkaicius(sum, 'sumos rezultatas')) {
